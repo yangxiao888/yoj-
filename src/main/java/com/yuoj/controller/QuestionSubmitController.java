@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletRequest;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @RestController
-@RequestMapping("/question_thumb")
+@RequestMapping("/question_submit")
 @Slf4j
 public class QuestionSubmitController {
 
@@ -46,7 +46,7 @@ public class QuestionSubmitController {
      * @param request
      * @return resultNum 本次点赞变化数
      */
-    @PostMapping("/")
+    @PostMapping("/do")
     public BaseResponse<Long> doQuestionSubmit(@RequestBody QuestionSubmitAddRequest questionSubmitAddRequest, HttpServletRequest request) {
         if (questionSubmitAddRequest == null || questionSubmitAddRequest.getQuestionId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);

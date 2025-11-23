@@ -73,3 +73,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.yuoj.controller
+# 代码沙箱配置
+code-sandbox:
+  type: example
